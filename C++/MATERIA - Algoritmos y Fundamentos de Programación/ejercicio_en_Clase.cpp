@@ -68,19 +68,62 @@ int main() {
      if(opcion_usuario == 2){
          cout << "¿Cuanto dinero quiere retirar? : ";
          cin >> dinero_a_retirar;
+         
+           if(dinero_a_retirar < 0){
+            cout << "El numero no puede ser menor a cero.";
+             return 0;
+          }
+          
+          if(dinero_a_retirar > 1000000){
+            cout << "Transacciones tienen limite de 1000000.";
+            return 0;
+          }
+          
+          if(dinero_a_retirar > saldo){
+            cout << "No puede ser mayor que el saldo disponible.";  
+            return 0;
+          }
+          
+          
          saldo -= dinero_a_retirar;
          cout<<"[!] Dinero retirado!";
          cout<< "Su saldo actual es : "<<saldo;
+         
+        
      }
      
      //CONSIGNAR DINERO
      if(opcion_usuario == 3){
          cout << "¿Cuanto dinero quiere consignar? : ";
          cin >> dinero_a_consignar;
+           return 0;
+         
+          if(dinero_a_retirar < 0){
+            cout << "El numero no puede ser menor a cero.";
+            return 0;
+          }
+          
+          if(dinero_a_retirar > 1000000){
+            cout << "Transacciones tienen limite de 1000000.";
+             return 0;
+          }
+          
+          if(dinero_a_retirar > saldo){
+            cout << "No puede ser mayor que el saldo disponible.";   
+               return 0;
+          }
+          
+          
          saldo += dinero_a_consignar;
          cout<<"[!] Dinero consignado!";
          cout<< "Su saldo actual es : "<<saldo; 
+         
+         
+         
      }
      
     return 0;
 }
+
+
+
