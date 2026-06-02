@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string> 
-
+#include <iomanip> 
 using namespace std;
 
 int main() {
@@ -64,6 +64,17 @@ int main() {
                 limite_credito = 3000000;
             }
             
+            // Resumen Final del Registro
+            cout << "\n=========================================" << endl;
+            cout << "       REGISTRO COMPLETADO EXITOSAMENTE" << endl;
+            cout << "=========================================" << endl;
+            cout << fixed << setprecision(0); // no usar n cientifica
+            cout << "Cliente: " << nombre << " (ID: " << numero_de_cliente << ")" << endl;
+            cout << "Direccion: " << calle_direccion << " #" << num_direccion << ", " << comuna_direccion << ", " << ciudad << endl;
+            cout << "Descuento: " << descuento << "%" << endl;
+            cout << "Limite de Credito: $" << limite_credito << endl;
+            cout << "Saldo Inicial: $" << saldo << endl;
+            cout << "=========================================" << endl;
 
             break; 
 
