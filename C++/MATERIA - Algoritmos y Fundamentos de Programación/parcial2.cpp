@@ -30,26 +30,34 @@ int main() {
 
     switch(caso) {
         case 1:
-            //nombre 
-            cout << "\n--- REGISTRO DE CLIENTE ---" << endl;
-            cout <<"Inserte su numero de cliente : ";
-            cin >> numero_de_cliente;
-            cout<<" Inserte su nombre";
-            getline(cin,nombre);
+          cout << "\n--- REGISTRO DE CLIENTE ---" << endl;
             
-            //direccion
-            cout<<"--Inserte su direccion-- :";
-            cout << "Inserte la Calle: ";
-            getline(cin >> ws, calle_direccion);
-            cout << "Inserte el Numero (casa/apto): ";
-            getline(cin >> ws, num_direccion);
-            cout << "Inserte la Comuna: ";
-            getline(cin >> ws, comuna_direccion);
-            cout << "Inserte la Ciudad: ";
-            getline(cin >> ws, ciudad);
+            cout << "Inserte su numero de cliente: ";
+            cin >> numero_de_cliente;
+            
+            cout << "Inserte su nombre (sin espacios): ";
+            cin >> nombre;
+            
+            // Direccion
+            cout << "--- Inserte su direccion ---" << endl;
+            
+            cout << "Calle: ";
+            cin >> calle_direccion;
+            
+            cout << "Numero (casa/apto): ";
+            cin >> num_direccion;
+            
+            cout << "Comuna: ";
+            cin >> comuna_direccion;
+            
+            cout << "Ciudad: ";
+            cin >> ciudad;
+
+            cout << "Inserte porcentaje de descuento (0-100): ";
+            cin >> descuento;
             
             //datos finacnieros
-            cout<<"Inserte su limite de credito";
+            cout<<"Inserte su limite de credito : ";
             cin>>limite_credito;
             if(limite_credito > 3000000){
                 cout<<"Limite de 3.000.000 excedido! el valor que ingreso fue ajustado a 3.000.000";
