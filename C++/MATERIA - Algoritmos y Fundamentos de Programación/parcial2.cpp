@@ -155,7 +155,7 @@ int main() {
             if (opcion_producto_a_comprar == 1) {
                 if (cantidad_a_comprar_producto <= s1) {
                     //validacion para que no supere el credito : 
-                    if(p1 * cantidad_a_comprar_producto * descuento > limite_credito){
+                    if(p1 * cantidad_a_comprar_producto * descuento > (limite_credito - saldo)){
                       cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
                     }
                     else{
@@ -181,7 +181,7 @@ int main() {
             else if (opcion_producto_a_comprar == 2) {
                 if (cantidad_a_comprar_producto <= s2) {
                     //validacion para que no supere el credito : 
-                    if(p1 * cantidad_a_comprar_producto * descuento > limite_credito){
+                    if(p2 * cantidad_a_comprar_producto * descuento > (limite_credito - saldo)){
                       cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
                     }
                     else{
@@ -206,7 +206,7 @@ int main() {
             else if (opcion_producto_a_comprar == 3) {
                   if (cantidad_a_comprar_producto <= s3) {
                     //validacion para que no supere el credito : 
-                    if(p3 * cantidad_a_comprar_producto * descuento > limite_credito){
+                    if(p3 * cantidad_a_comprar_producto * descuento > (limite_credito - saldo)){
                       cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
                     }
                     else{
@@ -231,7 +231,7 @@ int main() {
             else if (opcion_producto_a_comprar == 4) {
                   if (cantidad_a_comprar_producto <= s4) {
                     //validacion para que no supere el credito : 
-                    if(p4 * cantidad_a_comprar_producto * descuento > limite_credito){
+                    if(p4 * cantidad_a_comprar_producto * descuento > (limite_credito - saldo)){
                       cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
                     }
                     else{
@@ -256,7 +256,7 @@ int main() {
             else if (opcion_producto_a_comprar == 5) {
                 if (cantidad_a_comprar_producto <= s5) {
                     //validacion para que no supere el credito : 
-                    if(p5 * cantidad_a_comprar_producto * descuento > limite_credito){
+                    if(p5 * cantidad_a_comprar_producto * descuento > (limite_credito - saldo)){
                       cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
                     }
                     else{
