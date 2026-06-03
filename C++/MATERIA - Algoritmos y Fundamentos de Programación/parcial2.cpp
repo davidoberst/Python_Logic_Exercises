@@ -8,7 +8,7 @@ int main() {
     //info del cliente
     int numero_de_cliente;
     string nombre;
-    string num_direccion, calle_direccion, comuna_direccion, ciudad;
+    string num_direccion, calle_direccion, comuna_direccion, ciudad, fecha, hora;
     
     //info de dinero o creditos del cliente
     double saldo = 0;
@@ -20,12 +20,12 @@ int main() {
     //articulo 1
     string art1 = "Teclado para pc"; //art = articulo
     double p1 = 150000;  //p = precio
-    int s1 = 800; //s = stock
+    int s1 = 90; //s = stock
 
     // articulo 2
     string art2 = "Mouse";
     double p2 = 85000;
-    int s2 = 15;
+    int s2 = 35;
 
     // articulo 3
     string art3 = "Monitor";
@@ -35,7 +35,7 @@ int main() {
     // articulo 4
     string art4 = "Audifonos";
     double p4 = 80000;
-    int s4 = 40;
+    int s4 = 52;
 
     // articulo 5
     string art5 = "Luces";
@@ -79,6 +79,10 @@ int main() {
             cin >> comuna_direccion;
             cout << "Ciudad: ";
             cin >> ciudad;
+            cout<<"Fecha :";
+            cin>>fecha;
+            cout<<"Hora : ";
+            cin>>hora;
 
             cout << "Inserte porcentaje de descuento (0-100): ";
             cin >> descuento;
@@ -95,6 +99,7 @@ int main() {
             cout << "       REGISTRO COMPLETADO EXITOSAMENTE" << endl;
             cout << "=========================================" << endl;
             cout << fixed << setprecision(0); //notacion cientifica
+            cout<<"Fecha y hora de registro : "<<fecha<<" "<<hora<<endl;
             cout << "Cliente: " << nombre << " (NUM: " << numero_de_cliente << ")" << endl;
             cout << "Direccion: " << calle_direccion << " #" << num_direccion << ", " << comuna_direccion << ", " << ciudad << endl;
             cout << "Descuento: " << descuento << "%" << endl;
