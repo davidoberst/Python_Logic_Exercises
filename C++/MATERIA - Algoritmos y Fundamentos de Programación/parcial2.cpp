@@ -35,7 +35,7 @@ int main() {
     // articulo 4
     string art4 = "Audifonos";
     double p4 = 80000;
-    int s4 = 8;
+    int s4 = 40;
 
     // articulo 5
     string art5 = "Luces";
@@ -180,36 +180,100 @@ int main() {
             } 
             else if (opcion_producto_a_comprar == 2) {
                 if (cantidad_a_comprar_producto <= s2) {
-                    subtotal_temporal = p2 * cantidad_a_comprar_producto;
-                    s2 = s2 - cantidad_a_comprar_producto;
-                    cout << "Articulo añadido: " << art2 << endl;
+                    //validacion para que no supere el credito : 
+                    if(p1 * cantidad_a_comprar_producto * descuento > limite_credito){
+                      cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
+                    }
+                    else{
+                     cout<<endl;
+                     cout << fixed << setprecision(0);
+                     cout << "        [!] Compra aceptada "<<endl;
+                     cout << "==============FACTURA=================="<<endl;
+                     cout << "Articulos añadido : " << art2 << endl;
+                     cout << "Cantidad : "<<cantidad_a_comprar_producto << endl;
+                     cout << "Precio sin descuento : "<< p2 * cantidad_a_comprar_producto << endl;
+                     double desc = (p2 * cantidad_a_comprar_producto * descuento);
+                     cout << "Precio con descuento : "<< p2 * cantidad_a_comprar_producto * descuento << endl; 
+                     
+                     //Descuento del Stock y de la tarjeta
+                     cout << "Su cupo de credito cambio :"<<limite_credito-desc<<endl;
+                     cout << "El Stock de " <<art2<<" se reducio a "<< s2 - cantidad_a_comprar_producto ;
+                    }
                 } else {
                     cout << "No hay suficiente stock de " << art2 << endl;
                 }
             }
             else if (opcion_producto_a_comprar == 3) {
-                if (cantidad_a_comprar_producto <= s3) {
-                    subtotal_temporal = p3 * cantidad_a_comprar_producto;
-                    s3 = s3 - cantidad_a_comprar_producto;
-                    cout << "Articulo añadido: " << art3 << endl;
+                  if (cantidad_a_comprar_producto <= s3) {
+                    //validacion para que no supere el credito : 
+                    if(p3 * cantidad_a_comprar_producto * descuento > limite_credito){
+                      cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
+                    }
+                    else{
+                     cout<<endl;
+                     cout << fixed << setprecision(0);
+                     cout << "        [!] Compra aceptada "<<endl;
+                     cout << "==============FACTURA=================="<<endl;
+                     cout << "Articulos añadido : " << art3 << endl;
+                     cout << "Cantidad : "<<cantidad_a_comprar_producto << endl;
+                     cout << "Precio sin descuento : "<< p3 * cantidad_a_comprar_producto << endl;
+                     double desc = (p3 * cantidad_a_comprar_producto * descuento);
+                     cout << "Precio con descuento : "<< p3 * cantidad_a_comprar_producto * descuento << endl; 
+                     
+                     //Descuento del Stock y de la tarjeta
+                     cout << "Su cupo de credito cambio :"<<limite_credito-desc<<endl;
+                     cout << "El Stock de " <<art3<<" se reducio a "<< s3 - cantidad_a_comprar_producto ;
+                    }
                 } else {
                     cout << "No hay suficiente stock de " << art3 << endl;
                 }
             }
             else if (opcion_producto_a_comprar == 4) {
-                if (cantidad_a_comprar_producto <= s4) {
-                    subtotal_temporal = p4 * cantidad_a_comprar_producto;
-                    s4 = s4 - cantidad_a_comprar_producto;
-                    cout << "Articulo añadido: " << art4 << endl;
+                  if (cantidad_a_comprar_producto <= s4) {
+                    //validacion para que no supere el credito : 
+                    if(p4 * cantidad_a_comprar_producto * descuento > limite_credito){
+                      cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
+                    }
+                    else{
+                     cout<<endl;
+                     cout << fixed << setprecision(0);
+                     cout << "        [!] Compra aceptada "<<endl;
+                     cout << "==============FACTURA=================="<<endl;
+                     cout << "Articulos añadido : " << art4 << endl;
+                     cout << "Cantidad : "<<cantidad_a_comprar_producto << endl;
+                     cout << "Precio sin descuento : "<< p4 * cantidad_a_comprar_producto << endl;
+                     double desc = (p4 * cantidad_a_comprar_producto * descuento);
+                     cout << "Precio con descuento : "<< p4 * cantidad_a_comprar_producto * descuento << endl; 
+                     
+                     //Descuento del Stock y de la tarjeta
+                     cout << "Su cupo de credito cambio :"<<limite_credito-desc<<endl;
+                     cout << "El Stock de " <<art4<<" se reducio a "<< s4 - cantidad_a_comprar_producto ;
+                    }
                 } else {
                     cout << "No hay suficiente stock de " << art4 << endl;
                 }
             }
             else if (opcion_producto_a_comprar == 5) {
                 if (cantidad_a_comprar_producto <= s5) {
-                    subtotal_temporal = p5 * cantidad_a_comprar_producto;
-                    s5 = s5 - cantidad_a_comprar_producto;
-                    cout << "Articulo añadido: " << art5 << endl;
+                    //validacion para que no supere el credito : 
+                    if(p5 * cantidad_a_comprar_producto * descuento > limite_credito){
+                      cout<<"[x] Compra declinada, esta transaccion supera el limite de su credito";
+                    }
+                    else{
+                     cout<<endl;
+                     cout << fixed << setprecision(0);
+                     cout << "        [!] Compra aceptada "<<endl;
+                     cout << "==============FACTURA=================="<<endl;
+                     cout << "Articulos añadido : " << art5 << endl;
+                     cout << "Cantidad : "<<cantidad_a_comprar_producto << endl;
+                     cout << "Precio sin descuento : "<< p5 * cantidad_a_comprar_producto << endl;
+                     double desc = (p5 * cantidad_a_comprar_producto * descuento);
+                     cout << "Precio con descuento : "<< p5 * cantidad_a_comprar_producto * descuento << endl; 
+                     
+                     //Descuento del Stock y de la tarjeta
+                     cout << "Su cupo de credito cambio :"<<limite_credito-desc<<endl;
+                     cout << "El Stock de " <<art5<<" se reducio a "<< s5 - cantidad_a_comprar_producto ;
+                    }
                 } else {
                     cout << "No hay suficiente stock de " << art5 << endl;
                 }
